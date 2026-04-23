@@ -1,0 +1,269 @@
+:root {
+    --azul-industrial: #003366;
+    --amarillo-seguridad: #FFCC00;
+    --gris-fondo: #f8f9fa;
+    --texto: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    color: var(--texto);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Contenedor del Logo y Texto */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre la imagen y el texto */
+    text-decoration: none;
+}
+
+.logo img {
+    height: 50px; /* Ajustamos un poco el tamaño para que combine con el texto */
+    width: auto;
+}
+
+/* Estilo para el nombre de la empresa */
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Esto pone "NORTE" debajo de "PLATAFORMAS DEL" si quieres, 
+                               o quita esta línea si lo quieres todo en una sola fila */
+    font-family: 'Arial Black', sans-serif; /* Una letra gruesa e industrial */
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.text-white {
+    color: #FFFFFF; /* Blanco */
+}
+
+.text-blue {
+    color: #003366; /* Azul Industrial */
+}
+
+/* Si quieres que todo esté en una sola línea, usa este en lugar de flex-direction: column */
+/* .logo-text { display: block; } */
+
+/* Asegúrate de que el header tenga fondo oscuro si usas letras blancas */
+header {
+    background-color: #002e5d; /* El azul oscuro que usamos antes */
+    padding: 10px 0;
+}
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .logo img {
+        height: 45px; /* Lo hacemos un poco más chico en móviles */
+    }
+
+}
+
+.logo span { color: var(--amarillo-seguridad); }
+
+nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+
+nav a { text-decoration: none; color: var(--texto); font-weight: 500; }
+
+.btn-nav {
+    background: var(--azul-industrial);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.8)), url('img/VPatio1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem; /* Más grande */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+.cta-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--azul-industrial);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Equipos Grid */
+.grid-equipos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px;
+/* Estilos para la tabla técnica */
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+.specs-table td {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.specs-table td:last-child {
+    text-align: right;
+    color: #003366; /* Azul industrial para resaltar el dato */
+}
+
+.brand {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.btn-cotizar {
+    display: block;
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-cotizar:hover {
+    background: #FFCC00; /* Cambia a amarillo al pasar el mouse */
+    color: #003366;
+}
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+.card-img { height: 200px; background-color: #ddd; background-size: cover; }
+
+.card-info { padding: 20px; }
+
+.tag {
+    background: #eee;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+
+<section class="cobertura">
+    <div class="container">
+        <h2>Cobertura en Nuevo León</h2>
+        <p>Entregamos equipo el mismo día en las siguientes zonas industriales:</p>
+        <div class="chips-container">
+            <span class="chip">Santa Catarina</span>
+            <span class="chip">Apodaca (Parque Industrial Huinalá)</span>
+            <span class="chip">Escobedo</span>
+            <span class="chip">Guadalupe</span>
+            <span class="chip">García / Interpuerto</span>
+        </div>
+    </div>
+</section>
+}
+
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; }
+
+.copy {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    .hero h1 { font-size: 1.8rem; }
+    .cta-group { flex-direction: column; }
+}
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+.whatsapp-fixed:hover { transform: scale(1.1); }
+.whatsapp-fixed img { width: 35px; }
+
+
