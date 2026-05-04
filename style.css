@@ -218,19 +218,7 @@ footer {
     padding: 50px 0 20px;
     margin-top: 50px;
 
-<section class="cobertura">
-    <div class="container">
-        <h2>Cobertura en Nuevo León</h2>
-        <p>Entregamos equipo el mismo día en las siguientes zonas industriales:</p>
-        <div class="chips-container">
-            <span class="chip">Santa Catarina</span>
-            <span class="chip">Apodaca (Parque Industrial Huinalá)</span>
-            <span class="chip">Escobedo</span>
-            <span class="chip">Guadalupe</span>
-            <span class="chip">García / Interpuerto</span>
-        </div>
-    </div>
-</section>
+
 }
 
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr; }
