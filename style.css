@@ -144,6 +144,7 @@ nav a { text-decoration: none; color: var(--texto); font-weight: 500; }
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding-bottom: 50px;
+}
 /* Estilos para la tabla técnica */
 .specs-table {
     width: 100%;
