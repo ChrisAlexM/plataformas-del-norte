@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Renta de Plataformas de Elevación en Monterrey | Plataformas del Norte MX</title>
+    <meta name="description" content="Especialistas en renta de plataformas de elevación, tijeras y brazos articulados en Monterrey. Maquinaria segura para construcción y mantenimiento industrial. Crecemos junto con tu proyecto.">
+    <meta name="keywords" content="renta de plataformas, plataformas de elevacion, brazos articulados, plataformas de tijera, Monterrey, maquinaria de construccion, mantenimiento industrial, Genie, JLG">
+    <meta name="author" content="Plataformas del Norte MX">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (Redes Sociales) -->
+    <meta property="og:title" content="Renta de Plataformas de Elevación en Monterrey | Plataformas del Norte">
+    <meta property="og:description" content="Maquinaria especializada para mantenimiento y construcción. Amplio catálogo de plataformas de tijera y brazos articulados. ¡Cotiza hoy!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración Premium de Tailwind -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0B1E36', // Azul muy oscuro y elegante
+                            blue: '#1A365D', // Azul primario
+                            accent: '#0ea5e9', // Azul moderno 
+                            light: '#F8FAFC' // Fondo claro
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Barlow Condensed', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .view-section {
+            display: none;
+        }
+        .view-section.active {
+            display: block;
+        }
+
+        html {
+            scroll-padding-top: 5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-light dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="fixed w-full top-0 z-50 backdrop-blur-xl bg-white/85 dark:bg-slate-900/85 border-b border-slate-200 dark:border-slate-800 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <button onclick="navigateTo('home-view')" class="flex items-center gap-3 text-2xl font-heading font-bold text-brand-blue dark:text-white tracking-wide hover:scale-105 transition-transform text-left">
+    <span>PLATAFORMAS DEL <span class="text-brand-accent">NORTE</span></span>
+    <img src="IMG/logoSF.svg" alt="Logo Plataformas del Norte" class="h-8 w-auto object-contain">
+</button>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <button onclick="navigateTo('home-view')" class="font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors nav-link" data-target="home-view">Inicio</button>
+                    <button onclick="navigateTo('catalog-view')" class="font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors nav-link" data-target="catalog-view">Catálogo</button>
+                    <button onclick="navigateTo('contact-view')" class="font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-accent dark:hover:text-brand-accent transition-colors nav-link" data-target="contact-view">Nosotros & Contacto</button>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-brand-accent hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                        <svg id="theme-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+                    </button>
+
+                    <a href="https://wa.me/528441263411" target="_blank" rel="noopener noreferrer" class="bg-brand-accent hover:bg-sky-600 text-white px-6 py-2 rounded-lg font-bold shadow-lg shadow-sky-600/30 transition-transform transform hover:-translate-y-0.5">
+                        Cotizar Ya
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-brand-accent">
+                        <svg id="theme-icon-mobile" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+                    </button>
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-slate-600 dark:text-slate-300 hover:text-brand-accent focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden absolute w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl px-4 pt-2 pb-6 space-y-3">
+            <button onclick="navigateTo('home-view'); toggleMobileMenu()" class="block w-full text-left font-semibold text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">Inicio</button>
+            <button onclick="navigateTo('catalog-view'); toggleMobileMenu()" class="block w-full text-left font-semibold text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">Catálogo de Equipos</button>
+            <button onclick="navigateTo('contact-view'); toggleMobileMenu()" class="block w-full text-left font-semibold text-slate-600 dark:text-slate-300 p-3 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">Nosotros & Contacto</button>
+            <a href="https://wa.me/528441263411" target="_blank" class="block w-full text-center bg-brand-accent hover:bg-sky-600 text-white p-3 rounded-lg font-bold shadow-md mt-4">
+                Cotizar por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT CONTAINER ================= -->
+    <main class="min-h-screen">
+        
+        <!-- ================= VISTA 1: INICIO ================= -->
+        <div id="home-view" class="view-section active animate-fade-in">
+            <!-- Hero Section -->
+            <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center bg-cover bg-center" style="min-height: 90vh; background-image: url('img/genie.jpg');">
+                <!-- Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-navy/95 to-brand-navy/70 dark:from-slate-950/95 dark:to-slate-900/80 z-0"></div>
+                
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-3xl">
+                        <span class="text-brand-accent font-bold tracking-widest uppercase mb-2 block">Monterrey, Nuevo León</span>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">
+                            Renta de <span class="text-brand-accent">Plataformas de Elevación</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-slate-300 mb-10 font-light max-w-2xl">
+                            Maquinaria especializada para <strong class="text-white">mantenimiento y construcción</strong>. Amplio catálogo de plataformas de tijera y brazos articulados de marcas líderes.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://wa.me/528441263411" target="_blank" class="text-center bg-brand-accent hover:bg-sky-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-sky-600/30 transition-all transform hover:-translate-y-1 flex justify-center items-center">
+                                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 32 32"><path d="M16.002 2C8.28 2 2 8.28 2 16.002c0 2.45.632 4.75 1.745 6.776L2 30l7.387-1.637A13.93 13.93 0 0016.002 30c7.72 0 14-6.28 14-14.002S23.722 2 16.002 2z"/></svg>
+                                Cotizar por WhatsApp
+                            </a>
+                            <button onclick="navigateTo('catalog-view')" class="text-center bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1">
+                                Ver Catálogo Completo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soluciones / Beneficios (De lado a lado) -->
+            <section class="py-24 bg-white dark:bg-slate-900 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-5xl font-heading font-bold text-brand-blue dark:text-white mb-4">Soluciones para tu Proyecto</h2>
+                        <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <!-- 1. Logística (Texto Izq, Imagen Der) -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                        <div class="order-2 md:order-1 pr-0 md:pr-10">
+                            <div class="text-6xl mb-6">🚀</div>
+                            <h3 class="text-3xl lg:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Logística y Entregas</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">Eficiencia en envíos de maquinaria para construcción a toda la zona metropolitana de Monterrey. Contamos con nuestra propia flotilla para asegurar que tu equipo de elevación llegue a tiempo, justo donde la obra lo requiere.</p>
+                        </div>
+                        <div class="order-1 md:order-2 relative rounded-3xl overflow-hidden shadow-2xl h-80 lg:h-96">
+                            <img src="img/tijera-19ft.jpg" alt="Logística y Entregas" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+
+                    <!-- 2. Equipos Certificados (Imagen Izq, Texto Der) -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+                        <div class="order-1 relative rounded-3xl overflow-hidden shadow-2xl h-80 lg:h-96">
+                            <img src="img/brazo-45ft.jpg" alt="Equipos Certificados" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="order-2 pl-0 md:pl-10">
+                            <div class="text-6xl mb-6">🛡️</div>
+                            <h3 class="text-3xl lg:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Equipos Certificados</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">Trabajamos exclusivamente con plataformas de tijera, brazos articulados y manipuladores de marcas reconocidas a nivel mundial como Genie y JLG. Todo nuestro catálogo cuenta con mantenimientos preventivos rigurosos y listos para operar con seguridad.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Crecemos Contigo (Texto Izq, Imagen Der) -->
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 md:order-1 pr-0 md:pr-10">
+                            <div class="text-6xl mb-6">🤝</div>
+                            <h3 class="text-3xl lg:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-6">Crecemos Contigo</h3>
+                            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">Más que rentar equipos, buscamos hacer equipo. Brindamos asesoría personalizada para que elijas la maquinaria ideal y soporte continuo para asegurarnos de que tu labor nunca se detenga. El éxito de tu proyecto es el nuestro.</p>
+                        </div>
+                        <div class="order-1 md:order-2 relative rounded-3xl overflow-hidden shadow-2xl h-80 lg:h-96">
+                            <img src="img/Manipulador-telescopico-Genie.jpg" alt="Crecemos Contigo" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Equipos Destacados en Inicio -->
+            <section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-heading font-bold text-brand-blue dark:text-white mb-4">Nuestros Equipos</h2>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Conoce algunas de nuestras plataformas de elevación disponibles para renta inmediata en Monterrey.</p>
+                        <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full mt-6"></div>
+                    </div>
+
+                    <!-- Grid de Equipos Destacados -->
+                    <div id="featured-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <!-- JS inyectará las tarjetas aquí -->
+                    </div>
+
+                    <div class="text-center mt-16">
+                        <button onclick="navigateTo('catalog-view')" class="inline-flex justify-center items-center bg-white dark:bg-slate-800 border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-bold text-xl py-4 px-10 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+                            Ver todo el Catálogo
+                            <svg class="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- ================= VISTA 2: CATÁLOGO ================= -->
+        <div id="catalog-view" class="view-section pt-32 pb-24 bg-slate-50 dark:bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fade-in">
+                    <h2 class="text-5xl font-heading font-bold text-brand-blue dark:text-white mb-4">Nuestro Catálogo de Equipos</h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Encuentra el brazo articulado o plataforma de tijera ideal para tu obra o mantenimiento industrial.</p>
+                    <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full mt-6"></div>
+                </div>
+
+                <!-- Contenedor dinámico de tarjetas de producto -->
+                <div id="catalog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 animate-fade-in">
+                    <!-- JS inyectará las tarjetas aquí -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= VISTA 3: DETALLES DE PRODUCTO ================= -->
+        <div id="product-view" class="view-section pt-32 pb-24 bg-white dark:bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
+                
+                <button onclick="navigateTo('catalog-view')" class="mb-8 flex items-center text-slate-500 dark:text-slate-400 hover:text-brand-accent transition-colors font-bold text-lg group">
+                    <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Catálogo
+                </button>
+                
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Imagen Principal -->
+                    <div class="rounded-3xl overflow-hidden shadow-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 h-[400px] lg:h-[600px] relative">
+                        <img id="detail-img" class="w-full h-full object-cover" alt="Equipo" onerror="this.src='https://placehold.co/800x800/1e293b/f8fafc?text=Añadir+Imagen'" />
+                    </div>
+                    
+                    <!-- Información y Especificaciones -->
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span id="detail-category" class="bg-brand-blue dark:bg-slate-700 text-white text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm"></span>
+                            <span id="detail-brand" class="text-brand-accent font-bold text-lg uppercase tracking-widest"></span>
+                        </div>
+                        
+                        <h1 id="detail-title" class="text-4xl lg:text-5xl font-heading font-bold text-slate-900 dark:text-white mb-6 leading-tight"></h1>
+                        <p id="detail-desc" class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed"></p>
+                        
+                        <div class="bg-brand-light dark:bg-slate-800/50 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 mb-10 shadow-sm">
+                            <h3 class="text-2xl font-bold font-heading text-slate-900 dark:text-white mb-6 border-b border-slate-200 dark:border-slate-700 pb-3">Especificaciones Técnicas</h3>
+                            <ul id="detail-specs" class="space-y-4 text-slate-600 dark:text-slate-300">
+                                <!-- JS inyectará las specs aquí -->
+                            </ul>
+                        </div>
+                        
+                        <a id="detail-wa-btn" href="#" target="_blank" class="inline-flex justify-center items-center bg-brand-accent hover:bg-sky-600 text-white font-bold text-xl py-5 px-8 rounded-xl shadow-lg shadow-sky-600/30 transition-all transform hover:-translate-y-1">
+                            <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 32 32"><path d="M16.002 2C8.28 2 2 8.28 2 16.002c0 2.45.632 4.75 1.745 6.776L2 30l7.387-1.637A13.93 13.93 0 0016.002 30c7.72 0 14-6.28 14-14.002S23.722 2 16.002 2zm7.656 20.177c-.328.92-1.922 1.772-2.656 1.838-.734.066-1.574.328-4.984-1.05-4.085-1.652-6.758-5.836-6.955-6.098-.197-.262-1.64-2.164-1.64-4.13s1.05-2.95 1.443-3.344c.394-.393.853-.458 1.115-.458.262 0 .524.065.722.065.262 0 .524-.13.787.525.328.787 1.05 2.557 1.115 2.688.066.13.13.262.066.458-.065.197-.13.328-.262.458-.13.13-.262.328-.393.46-.13.13-.262.262-.13.46.13.196.59 1.05 1.246 1.64.852.786 1.64 1.05 1.836 1.114.197.065.328.065.46-.065.13-.13.524-.59.72-1.05.198-.46.395-.46.59-.394.198.066 1.247.59 1.444.656.197.066.328.13.394.197.066.065.066.393-.262 1.312z"/></svg>
+                            Cotizar este Equipo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= VISTA 4: NOSOTROS Y CONTACTO ================= -->
+        <div id="contact-view" class="view-section pt-32 pb-24 bg-slate-50 dark:bg-slate-900/50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Sección Nosotros -->
+                <div class="text-center mb-16 animate-fade-in">
+                    <h2 class="text-5xl font-heading font-bold text-brand-blue dark:text-white mb-6">Ayudamos a Construir el Futuro</h2>
+                    <p class="text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl mx-auto mb-6">
+                        En <strong class="text-brand-accent">Plataformas del Norte MX</strong> nos dedicamos a la renta de maquinaria de elevación especializada. Nuestro compromiso va más allá de entregar un equipo; <strong>buscamos ayudar genuinamente al cliente, solucionar sus retos de altura y crecer juntos</strong> en cada proyecto de construcción o mantenimiento industrial.
+                    </p>
+                    <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">
+                        Atendemos y servimos a la industria regiomontana brindando asesoría personalizada para asegurar que elijas exactamente el brazo articulado o plataforma de tijera que tu obra necesita, optimizando tus tiempos y garantizando la seguridad de tu personal.
+                    </p>
+                    <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full mt-10"></div>
+                </div>
+
+                <h3 class="text-3xl font-heading font-bold text-center text-slate-900 dark:text-white mb-10">Ponte en Contacto con Nosotros</h3>
+
+                <!-- Tarjetas de Contacto -->
+                <div class="grid md:grid-cols-2 gap-8 animate-fade-in">
+                    <!-- WhatsApp Card -->
+                    <a href="https://wa.me/528441263411" target="_blank" rel="noopener noreferrer" class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-brand-accent/50 transition-all transform hover:-translate-y-2 flex items-center gap-6 group">
+                        <div class="w-16 h-16 bg-[#25D366]/10 text-[#25D366] rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 32 32"><path d="M16.002 2C8.28 2 2 8.28 2 16.002c0 2.45.632 4.75 1.745 6.776L2 30l7.387-1.637A13.93 13.93 0 0016.002 30c7.72 0 14-6.28 14-14.002S23.722 2 16.002 2zm7.656 20.177c-.328.92-1.922 1.772-2.656 1.838-.734.066-1.574.328-4.984-1.05-4.085-1.652-6.758-5.836-6.955-6.098-.197-.262-1.64-2.164-1.64-4.13s1.05-2.95 1.443-3.344c.394-.393.853-.458 1.115-.458.262 0 .524.065.722.065.262 0 .524-.13.787.525.328.787 1.05 2.557 1.115 2.688.066.13.13.262.066.458-.065.197-.13.328-.262.458-.13.13-.262.328-.393.46-.13.13-.262.262-.13.46.13.196.59 1.05 1.246 1.64.852.786 1.64 1.05 1.836 1.114.197.065.328.065.46-.065.13-.13.524-.59.72-1.05.198-.46.395-.46.59-.394.198.066 1.247.59 1.444.656.197.066.328.13.394.197.066.065.066.393-.262 1.312z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">WhatsApp</h4>
+                            <p class="text-slate-500 dark:text-slate-400">Cotización y respuesta inmediata</p>
+                        </div>
+                    </a>
+
+                    <!-- Correo Card -->
+                    <a href="mailto:plataformasnortemx@gmail.com" class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-brand-accent/50 transition-all transform hover:-translate-y-2 flex items-center gap-6 group">
+                        <div class="w-16 h-16 bg-brand-accent/10 text-brand-accent rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div class="overflow-hidden">
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Correo Electrónico</h4>
+                            <p class="text-slate-500 dark:text-slate-400 truncate text-sm">plataformasnortemx@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <!-- Teléfono Card -->
+                    <a href="tel:528441263411" class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-brand-accent/50 transition-all transform hover:-translate-y-2 flex items-center gap-6 group">
+                        <div class="w-16 h-16 bg-brand-blue/10 text-brand-blue dark:bg-slate-700 dark:text-white rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Línea Telefónica</h4>
+                            <p class="text-slate-500 dark:text-slate-400 font-medium text-lg">844 126 3411</p>
+                        </div>
+                    </a>
+
+                    <!-- Ubicación Card -->
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700 flex items-center gap-6 group hover:shadow-xl transition-all">
+                        <div class="w-16 h-16 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Área de Servicio</h4>
+                            <p class="text-slate-500 dark:text-slate-400">Monterrey y Zona Metropolitana, N.L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-brand-navy dark:bg-slate-950 text-slate-300 py-16 border-t-4 border-brand-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            
+            <!-- Fila 1: Info Principal -->
+            <div class="mb-10 max-w-4xl">
+                <h4 class="text-3xl font-heading font-bold text-white mb-4">Plataformas del <span class="text-brand-accent">Norte Mx</span></h4>
+                <p class="text-slate-400 leading-relaxed text-lg">Especialistas en renta de plataformas de elevación. Servimos y atendemos a clientes del sector industrial, mantenimiento y construcción con maquinaria confiable. Crecemos junto a tu negocio.</p>
+            </div>
+
+            <!-- Fila 2: Medios de Contacto -->
+            <div class="w-full max-w-5xl border-t border-b border-slate-800/50 py-8 mb-10">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        <span class="text-lg">Monterrey, N.L.</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <a href="tel:528441263411" class="hover:text-white transition-colors text-lg font-bold">844 126 3411</a>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:plataformasnortemx@gmail.com" class="hover:text-white transition-colors text-lg font-bold text-brand-accent">Enviar Correo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila 3: Coberturas (Lista Columnas) -->
+            <div class="w-full max-w-5xl">
+                <h4 class="text-xl font-bold text-white mb-6">Logística Eficiente en Zona Metropolitana</h4>
+                <ul class="flex flex-wrap justify-center gap-4 md:gap-8 text-slate-400 text-sm md:text-base">
+                    <li class="flex items-center"><span class="w-2 h-2 bg-brand-accent rounded-full mr-2"></span> Monterrey</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-brand-accent rounded-full mr-2"></span> San Pedro Garza García</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-brand-accent rounded-full mr-2"></span> Apodaca</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-brand-accent rounded-full mr-2"></span> Escobedo</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-brand-accent rounded-full mr-2"></span> Santa Catarina</li>
+                    <li class="flex items-center"><span class="w-2 h-2 bg-brand-accent rounded-full mr-2"></span> Guadalupe</li>
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="text-center pt-12 mt-12 border-t border-slate-900 text-sm text-slate-500">
+            <p>&copy; 2026 Plataformas del Norte Mx. Todos los derechos reservados. Renta de Maquinaria para Construcción.</p>
+        </div>
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        // --- 1. BASE DE DATOS DE EQUIPOS (MOCK) ---
+        const PRODUCTOS = [
+            {
+                id: 'genie-gs-1930',
+                nombre: 'Plataforma de Tijera Eléctrica GS-1930',
+                marcas: 'Genie',
+                categoria: 'Tijera Eléctrica',
+                imagen: 'img/genieGS-1930',
+                descripcion: 'Ideal para trabajos de mantenimiento en interiores y sobre superficies firmes y niveladas. Operación eléctrica silenciosa y sin emisiones, perfecta para naves industriales y centros comerciales.',
+                especificaciones: [
+                    'Altura de trabajo: 7.79 m (25 ft)',
+                    'Capacidad de carga: 227 kg (500 lbs)',
+                    'Ancho de la máquina: 0.76 m (2 ft 6 in)',
+                    'Fuente de poder: 24V DC (cuatro baterías de 6V)',
+                    'Uso recomendado: Interiores / Suelo firme'
+                ]
+            },
+            {
+                id: 'jlg-450aj',
+                nombre: 'Brazo Articulado JLG 450AJ',
+                marcas: 'JLG',
+                categoria: 'Brazo Articulado',
+                imagen: 'img/JLG 450AJ.webp',
+                descripcion: 'Brazo articulado impulsado por motor de combustión, excelente para terrenos irregulares en obras de construcción. Ofrece gran alcance horizontal y versatilidad para evadir obstáculos en altura.',
+                especificaciones: [
+                    'Altura de trabajo: 15.77 m (51 ft)',
+                    'Alcance horizontal: 7.62 m (25 ft)',
+                    'Capacidad de la plataforma: 250 kg',
+                    'Motor: Combustión (Diesel/Dual)',
+                    'Uso recomendado: Exteriores / Todo Terreno'
+                ]
+            },
+            {
+                id: 'genie-z45-25',
+                nombre: 'Brazo Articulado Eléctrico Z-45/25 DC',
+                marcas: 'Genie',
+                categoria: 'Brazo Eléctrico',
+                imagen: 'img/GenieZ-45.jpg',
+                descripcion: 'Combinación perfecta de alcance y cero emisiones. Este brazo articulado eléctrico es la mejor opción para contratistas que requieren trabajar en interiores amplios o zonas de bajas emisiones.',
+                especificaciones: [
+                    'Altura de trabajo: 15.94 m (51 ft 9 in)',
+                    'Alcance horizontal: 7.65 m (25 ft 1 in)',
+                    'Capacidad de carga: 227 kg',
+                    'Alimentación: Eléctrica 48V DC',
+                    'Uso recomendado: Interiores / Exteriores pavimentados'
+                ]
+            },
+            {
+                id: 'jlg-2632es',
+                nombre: 'Plataforma de Tijera Eléctrica 2632ES',
+                marcas: 'JLG',
+                categoria: 'Tijera Eléctrica',
+                imagen: 'img/tijera-19ft.jpg',
+                descripcion: 'Eficiencia energética de primer nivel. Sus motores de tracción eléctrica directa proporcionan ciclos de trabajo más largos y mayor maniobrabilidad en espacios reducidos.',
+                especificaciones: [
+                    'Altura de trabajo: 7.6 m (25 ft)',
+                    'Capacidad de plataforma: 230 kg (500 lb)',
+                    'Ancho de máquina: 0.81 m (32 in)',
+                    'Alimentación: Eléctrica (Baterías)',
+                    'Uso recomendado: Interiores, pasillos estrechos'
+                ]
+            }
+        ];
+
+        // --- 2. SISTEMA DE NAVEGACIÓN (SPA) ---
+        function navigateTo(viewId, productId = null) {
+            // Ocultar todas las vistas
+            document.querySelectorAll('.view-section').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Mostrar la vista objetivo
+            const targetView = document.getElementById(viewId);
+            if (targetView) {
+                targetView.classList.add('active');
+                
+                // Reiniciar animación
+                targetView.classList.remove('animate-fade-in');
+                void targetView.offsetWidth; // Trigger reflow
+                targetView.classList.add('animate-fade-in');
+            }
+
+            // Actualizar estado visual de los links del navbar
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if(link.getAttribute('data-target') === viewId) {
+                    link.classList.add('text-brand-accent');
+                    link.classList.remove('text-slate-600', 'dark:text-slate-300');
+                } else {
+                    link.classList.remove('text-brand-accent');
+                    link.classList.add('text-slate-600', 'dark:text-slate-300');
+                }
+            });
+
+            // Lógica específica por vista
+            if (viewId === 'catalog-view' && document.getElementById('catalog-grid').innerHTML.trim() === '') {
+                renderCatalog();
+            } else if (viewId === 'product-view' && productId) {
+                renderProductDetails(productId);
+            }
+
+            // Scroll hacia arriba
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // --- 3. GENERADOR DE TARJETAS DE EQUIPO ---
+        // Helper function para crear la misma tarjeta en Inicio y en Catálogo
+        function createProductCardHTML(p) {
+            return `
+                <div onclick="navigateTo('product-view', '${p.id}')" class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-700 hover:shadow-2xl transition-all duration-300 group cursor-pointer flex flex-col h-full transform hover:-translate-y-2">
+                    <div class="relative h-72 bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                        <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/1e293b/f8fafc?text=${p.nombre.replace(/ /g, '+')}'" />
+                        <span class="absolute top-4 right-4 bg-brand-blue dark:bg-slate-900/80 backdrop-blur-sm text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide shadow-md border border-white/10">${p.categoria}</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <p class="text-sm text-brand-accent mb-2 font-bold tracking-wide uppercase">${p.marcas}</p>
+                        <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white mb-4 leading-tight">${p.nombre}</h3>
+                        <div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700">
+                            <span class="inline-flex items-center text-brand-blue dark:text-brand-accent font-bold group-hover:underline">
+                                Ver Detalles y Cotizar 
+                                <svg class="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCatalog() {
+            const grid = document.getElementById('catalog-grid');
+            if (grid) grid.innerHTML = PRODUCTOS.map(createProductCardHTML).join('');
+        }
+
+        function renderFeatured() {
+            const grid = document.getElementById('featured-grid');
+            // Muestra los primeros 3 productos en la página de inicio
+            if (grid) grid.innerHTML = PRODUCTOS.slice(0, 3).map(createProductCardHTML).join('');
+        }
+
+
+        // --- 4. RENDERIZADO DETALLES DE PRODUCTO ---
+        function renderProductDetails(productId) {
+            const product = PRODUCTOS.find(p => p.id === productId);
+            if (!product) return;
+
+            document.getElementById('detail-img').src = product.imagen;
+            document.getElementById('detail-img').alt = product.nombre;
+            document.getElementById('detail-category').textContent = product.categoria;
+            document.getElementById('detail-brand').textContent = product.marcas;
+            document.getElementById('detail-title').textContent = product.nombre;
+            document.getElementById('detail-desc').textContent = product.descripcion;
+            
+            const specsList = document.getElementById('detail-specs');
+            specsList.innerHTML = product.especificaciones.map(spec => `
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-brand-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>${spec}</span>
+                </li>
+            `).join('');
+
+            // Preparar el mensaje para WhatsApp
+            const waMessage = encodeURIComponent(`Hola Plataformas del Norte MX, me interesa cotizar la renta del equipo: ${product.nombre} (${product.marcas}). ¿Me podrían dar información de disponibilidad en Monterrey?`);
+            document.getElementById('detail-wa-btn').href = `https://wa.me/528441263411?text=${waMessage}`;
+        }
+
+        // --- 5. MENÚ MÓVIL ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const path = document.getElementById('menu-icon-path');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                path.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Icono de 'X'
+            } else {
+                menu.classList.add('hidden');
+                path.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7'); // Icono de hamburguesa
+            }
+        }
+
+        // --- 6. MODO OSCURO (DARK MODE) ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+        
+        const moonIcon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>';
+        const sunIcon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+
+        function updateThemeIcons(isDark) {
+            document.getElementById('theme-icon').innerHTML = isDark ? sunIcon : moonIcon;
+            document.getElementById('theme-icon-mobile').innerHTML = isDark ? sunIcon : moonIcon;
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                updateThemeIcons(false);
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                updateThemeIcons(true);
+            }
+        }
+
+        // Inicializar tema y vistas
+        window.addEventListener('DOMContentLoaded', () => {
+            // Revisar preferencia de sistema o guardada
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                updateThemeIcons(true);
+            } else {
+                document.documentElement.classList.remove('dark');
+                updateThemeIcons(false);
+            }
+
+            themeToggleBtn.addEventListener('click', toggleTheme);
+            themeToggleBtnMobile.addEventListener('click', toggleTheme);
+            
+            // Renderizar equipos destacados en Inicio y el catálogo
+            renderFeatured();
+            renderCatalog();
+            
+            // Asegurar que el estado activo inicial del navbar coincida
+            document.querySelector('.nav-link[data-target="home-view"]').classList.add('text-brand-accent');
+            document.querySelector('.nav-link[data-target="home-view"]').classList.remove('text-slate-600', 'dark:text-slate-300');
+        });
+    </script>
+</body>
+</html>
